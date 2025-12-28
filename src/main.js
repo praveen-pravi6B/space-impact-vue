@@ -1,3 +1,4 @@
+import './firebase'
 import './style.css'
 
 import { createApp } from 'vue'
