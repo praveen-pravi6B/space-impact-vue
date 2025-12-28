@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2d3641;
+    overflow-x: hidden;
+}
+
+/* ----------------Nav bar --------------*/
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: #2b2e32;
+}
+
+#logo {
+    width: 130px;
+    height: 50px;
+    padding: 5px 10px;
+}
+
+/*----------------Main Game Div------------*/
+#game {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+canvas {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#canvas-bg {
+    position: absolute;
+}
+
+#canvas-main {
+    position: relative;
+}
+
+/* ------------- Game-Buttons-pause and others ---------*/
+#pause-button {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-family: 'Silkscreen', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+#pause-button:hover {
+    background-color: gainsboro;
+}
+
+.ingame-button {
+    padding: 5px 10px;
+    font-size: 2em;
+    font-family: 'Silkscreen', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.ingame-button:hover {
+    background-color: gainsboro;
+}
+
+#exit {
+    display: none;
+}
+
+/* ---------------------Info --------------*/
+#info {
+    font-family: 'VT323', monospace;
+    color: white;
+    position: relative;
+    left: calc(50% - 420px);
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-head {
+    padding: 0 10px;
+    font-size: 2rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.action {
+    padding: 10px;
+    margin-left: 20px;
+    font-size: 1.8rem;
+}
+
+.control-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#arrows {
+    width: 50px;
+}
+
+#space {
+    width: 100px;
+}
+
+#xKey {
+    width: 30px;
+}
+
+.desc-head {
+    padding: 5px 10px;
+    font-size: 2rem;
+}
+
+.desc {
+    padding-left: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/*-------------toggle-------------*/
+.toggle-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+    margin: 10px 0px;
+}
+
+.toggle {
+    width: 40px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    top: -2.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-on {
+    background-color: gold;
+}
+
+.toggle-ball-on {
+    background-color: goldenrod;
+    transform: translateX(20px);
+}
+
+.buttons-onscreen {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.button img {
+    width: 60px;
+    height: 60px;
+}
+
+#button-left {
+    position: absolute;
+    left: 10px;
+    bottom: 120px;
+}
+
+#button-up {
+    position: absolute;
+    left: 70px;
+    bottom: 180px;
+}
+
+#button-right {
+    position: absolute;
+    left: 130px;
+    bottom: 120px;
+}
+
+#button-down {
+    position: absolute;
+    left: 70px;
+    bottom: 60px;
+}
+
+#button-fire {
+    position: absolute;
+    right: 70px;
+    bottom: 80px;
+}
+
+#button-x {
+    position: absolute;
+    right: 10px;
+    bottom: 150px;
+}
+
+
+/* ------------ RWD -----------*/
+@media only screen and (max-width:840px) {
+    #info {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .ingame-button {
+        font-size: 1em;
+        transform: translate(-50%, 30px);
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .button img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #button-left {
+        left: 10px;
+        bottom: 110px;
+    }
+
+    #button-up {
+        left: 60px;
+        bottom: 160px;
+    }
+
+    #button-right {
+        left: 110px;
+        bottom: 110px;
+    }
+
+    #button-down {
+        left: 60px;
+        bottom: 60px;
+    }
+}
