@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { SpaceImpactGame } from './game/engine.js';
 
-const showOnscreenButtons = ref(false);
+const showOnscreenButtons = ref(window.innerWidth <= 840);
 let game = null;
 
 const toggleOnscreenButtons = () => {
