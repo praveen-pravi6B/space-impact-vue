@@ -276,10 +276,6 @@ export class UI {
         for (let i = 0; i < this.game.lives; i++) ctx.drawImage(this.image, 900, heartY * 150, 50, 40, i * 55 + 5, 5, 50, 40);
         let sy = 0; if (this.game.specialAtttack === "laser") sy = 5; else if (this.game.specialAtttack === "wall") sy = 7; if (this.game.isLevelDark) sy++;
         ctx.drawImage(this.image, 900, sy * 150, 50, 40, 400, 10, 50, 40);
-        ctx.save(); ctx.fillStyle = this.game.isLevelDark ? "#aad69c" : "#282828"; ctx.font = "bold 52px Silkscreen";
-        ctx.fillText(this.game.specialCount.toString().padStart(2, "0"), 460, 45);
-        ctx.fillText("L" + this.game.currentLevel.number, 530, 45);
-        ctx.fillText(this.game.playerScore.toString().padStart(5, "0"), 650, 45);
-        ctx.restore();
+        ctx.save(); ctx.fillStyle = this.game.isLevelDark ? "#aad69c" : "#282828"; ctx.font = "bold 52px Silkscreen"; ctx.fillText(this.game.specialCount.toString().padStart(2, "0"), 460, 45); ctx.fillText(this.game.playerScore.toString().padStart(5, "0"), 600, 45); ctx.restore();
     }
 }
