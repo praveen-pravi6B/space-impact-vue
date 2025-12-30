@@ -46,7 +46,7 @@ export const getEnemiesLvl3 = (g, l) => [
 
 export const getEnemiesLvl4 = (g, l) => [
   { time: 2000, object: [new E.Beetle(g, l, 15, 840, 50, true, 3, 1, "zigzag", 700, 800)] },
-  { time: 8000, object: [new E.Shuttle(g, l, 15, 840, 200, false, 5, 0, "linear"), new E.Shuttle(g, l, 15, 940, 100, false, 5, 0, "linear"), new E.Shuttle(g, l, 15, 1040, 300, false, 5, 0, "linear")] },
+  { time: 8000, object: [new E.Meteor(g, l, 15, 840, 200, false, 5, 0, "linear"), new E.Meteor(g, l, 15, 940, 100, false, 5, 0, "linear"), new E.Meteor(g, l, 15, 1040, 300, false, 5, 0, "linear")] },
   { time: 14500, object: [new E.Shuttle(g, l, 15, 840, 250, false, 3, 0, "linear"), new PowerUp(g, 940, 250, 3, 0, "linear")] },
   { time: 22000, object: [new E.Beetle(g, l, 20, 840, 100, true, 4, 0.04, "wave", 100, 100), new E.Beetle(g, l, 20, 1040, 350, true, 4, 0.04, "wave", 100, 350)] },
   { time: 32000, object: [new E.Tadpole(g, l, 20, 840, 50, true, 3, 2, "zigzag", 300, 700), new E.Tadpole(g, l, 1000, 400, true, 3, -2, "zigzag", 300, 700)] },
@@ -57,7 +57,7 @@ export const getEnemiesLvl4 = (g, l) => [
 
 export const getEnemiesLvl5 = (g, l) => [
   { time: 2000, object: [new E.Marble3(g, l, 15, 840, 440, true, 2.8, -2, "zigzag", 300, 600)] },
-  { time: 10000, object: [new E.Marble2(g, l, 10, 840, 50, false, 4, 0, "linear"), new E.Marble2(g, l, 10, 940, 100, false, 4, 0, "linear"), new E.Marble2(g, l, 10, 1040, 150, false, 4, 0, "linear")] },
+  { time: 10000, object: [new E.Marble1(g, l, 10, 840, 50, false, 4, 0, "linear"), new E.Marble1(g, l, 10, 940, 100, false, 4, 0, "linear"), new E.Marble1(g, l, 10, 1040, 150, false, 4, 0, "linear")] },
   { time: 18000, object: [new E.Marble2(g, l, 15, 840, 300, true, 3, 0.05, "wave", 60, 300), new PowerUp(g, 1000, 300, 3, 0, "linear")] },
   { time: 28000, object: [new E.Shuttle(g, l, 25, 840, 100, true, 5, 0, "linear"), new E.Shuttle(g, l, 25, 940, 200, true, 5, 0, "linear"), new E.Shuttle(g, l, 25, 1040, 300, true, 5, 0, "linear")] },
   { time: 40000, object: [new E.Marble3(g, l, 20, 840, 50, true, 4, 2, "zigzag", 400, 800), new E.Marble3(g, l, 20, 1000, 400, true, 4, -2, "zigzag", 400, 800)] },
